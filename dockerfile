@@ -1,4 +1,7 @@
-FROM openjdk:11
-COPY app.py app.py 
-RUN app.py 
-CMD app 
+FROM python:3.9
+
+WORKDIR /app
+
+COPY app.py .
+
+CMD ["python", "app.py"]
